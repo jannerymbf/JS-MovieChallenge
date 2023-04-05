@@ -2,11 +2,76 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movie Challenge</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.scss" />
   </head>
   <body>
-    <div id="root"></div>
-    <script src="main.js" type="module"></script>
+    <section>
+      <div>
+        <img src="" alt="Movie Searcher logo">
+        <h1>Movie Searcher</h1>
+      </div>
+      <h2>What movie are you looking for?</h2>
+      <input type="text" placeholder="Enter your movie here...">
+      <button>Search</button>
+    </section>
+
+    <section>
+      <header>
+        <img src="" alt="Movie Searcher logo">
+        <h1>Movie Searcher</h1>
+      </header>
+      <main>
+        <div>
+          <p>128 results for Spiderman</p>
+        </div>
+        <section>
+          <article>
+            <img src="" alt="movie poster">
+            <div>
+              <p>Title</p>
+              <p>type</p>
+              <p>year</p>
+            </div>
+          </article>
+        </section>
+      </main>
+    </section>
+
+    <section>
+      <header>
+        <img src="" alt="Movie Searcher logo">
+        <h1>Movie Searcher</h1>
+      </header>
+      <main>
+        <img src="" alt="movie poster">
+        <h3>Title</h3>
+        <p>Plot</p>
+        <table>
+          <tr>
+            <td>Country:</td>
+            <td>United States</td>
+          </tr>
+          <tr>
+            <td>Director:</td>
+            <td>David Yates</td>
+          </tr>
+          <tr>
+            <td>Released:</td>
+            <td>39 Jun 2006</td>
+          </tr>
+          <tr>
+            <td>Runtime:</td>
+            <td>154 min</td>
+          </tr>
+          <tr>
+            <td>Year:</td>
+            <td>2011</td>
+          </tr>
+        </table>
+      </main>
+    </section>
+    <script src="movie.js" type="module"></script>
   </body>
 </html>
