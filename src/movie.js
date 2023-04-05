@@ -13,7 +13,7 @@ btn.addEventListener('click', () => {
       totalResults.innerHTML = `${response.totalResults} results for ${input.value}`;
       response.Search.forEach(element => {
         template +=
-          `<a href="#${element.imdbID}">
+          `<a href="#movie-display">
             <article class="${element.imdbID}">
               <img class="${element.imdbID}" width=100 src="${element.Poster}" alt="${element.Title}">
               <div class="${element.imdbID}">
@@ -36,33 +36,31 @@ moviesContainer.addEventListener('click', (event) => {
   showMovie(event.target.className)
     .then(response => {
       template +=
-      `<div id=${response.imdbID}>
-        <img src="${response.Poster}" width=100 alt="movie poster">
-        <h3>${response.Title}</h3>
-        <p>${response.Plot}</p>
-        <table>
-          <tr>
-            <td>Country:</td>
-            <td>${response.Country}</td>
-          </tr>
-          <tr>
-            <td>Director:</td>
-            <td>${response.Director}</td>
-          </tr>
-          <tr>
-            <td>Released:</td>
-            <td>${response.Released}</td>
-          </tr>
-          <tr>
-            <td>Runtime:</td>
-            <td>${response.Runtime}</td>
-          </tr>
-          <tr>
-            <td>Year:</td>
-            <td>${response.Year}</td>
-          </tr>
-        </table>
-      </div>`
+      ` <img src="${response.Poster}" width=100 alt="movie poster">
+      <h3>${response.Title}</h3>
+      <p>${response.Plot}</p>
+      <table>
+        <tr>
+          <td>Country:</td>
+          <td>${response.Country}</td>
+        </tr>
+        <tr>
+          <td>Director:</td>
+          <td>${response.Director}</td>
+        </tr>
+        <tr>
+          <td>Released:</td>
+          <td>${response.Released}</td>
+        </tr>
+        <tr>
+          <td>Runtime:</td>
+          <td>${response.Runtime}</td>
+        </tr>
+        <tr>
+          <td>Year:</td>
+          <td>${response.Year}</td>
+        </tr>
+      </table>`
       movieShowcase.innerHTML = template;
     })
 })
