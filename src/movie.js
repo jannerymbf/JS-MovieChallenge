@@ -26,4 +26,5 @@ btn.addEventListener('click', () => {
     .catch(() => {
       moviesContainer.innerHTML = 'No movies found';
     })
-})
+});
+
