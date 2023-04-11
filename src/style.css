@@ -65,4 +65,22 @@ body {
   text-align: center;
 }
 
+.header-with-logo {
+  margin: 15px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  color: #EEBA2C;
+}
+.header-with-logo img {
+  width: 12px;
+  height: 12px;
+}
+.header-with-logo h1 {
+  font-size: 0.8rem;
+  font-family: "Gloria Hallelujah", cursive;
+  text-align: center;
+}
+
 /*# sourceMappingURL=style.css.map */

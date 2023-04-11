@@ -80,3 +80,22 @@ body {
   }
 }
 
+// Styles for second section Movie gallery
+
+.header-with-logo {
+  margin: 15px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  color: $color-primary;
+  img {
+    width: 12px;
+    height: 12px;
+  }
+  h1 {
+    font-size: 0.8rem;
+    @include fonts($font-principal);
+  }
+}
+
