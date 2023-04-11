@@ -46,6 +46,10 @@ body {
   font-family: "Gloria Hallelujah", cursive;
   text-align: center;
 }
+.searcher__input-movie::-moz-placeholder {
+  font-size: 0.8rem;
+  color: #dedede;
+}
 .searcher__input-movie::placeholder {
   font-size: 0.8rem;
   color: #dedede;
@@ -110,7 +114,8 @@ body {
 .gallery__display__movies img {
   width: 120px;
   height: 156px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .gallery__display__movies__movie-info {
   width: 120px;
@@ -134,4 +139,19 @@ body {
   font-weight: 600;
 }
 
-/*# sourceMappingURL=style.css.map */
+.movie {
+  height: 100vh;
+  font-family: "Hind Guntur", sans-serif;
+}
+.movie__display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+.movie__display img {
+  height: 195px;
+  width: 135px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}/*# sourceMappingURL=style.css.map */
