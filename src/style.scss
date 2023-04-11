@@ -9,6 +9,15 @@ $font-paragraphs: 'Hind Guntur', sans-serif;
   @if $font == $font-principal {
     font-family: $font-principal;
     text-align: center;
+  } @else {
+    font-family: $font-paragraphs;
+  }
+}
+
+@mixin background($color) {
+  @if $color == $color-primary {
+    background-color: $color-primary;
+    color: $color-dark;
   }
 }
 
@@ -72,18 +81,18 @@ body {
     width: 40%;
     max-width: 180px;
     height: 35px;
-    background-color: $color-primary;
     border: none;
     border-radius: 10px;
     font-size: 1rem;
     @include fonts($font-principal);
+    @include background($color-primary);
   }
 }
 
 // Styles for second section Movie gallery
 
 .header-with-logo {
-  margin: 15px 0;
+  padding: 15px 0 20px 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -96,6 +105,55 @@ body {
   h1 {
     font-size: 0.8rem;
     @include fonts($font-principal);
+  }
+}
+
+.gallery__display {
+  padding: 0 20px;
+  text-align: center;
+  @include fonts($font-paragraphs);
+  &__total-results {
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+  }
+  &__movies {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px 15px;
+    a {
+      text-decoration: none;
+    }
+    article {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    img {
+      width: 120px;
+      height: 156px;
+      object-fit: cover;
+    }
+    &__movie-info {
+      width: 120px;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      border-radius: 0 0 10px 10px;
+      font-size: 1rem;
+      line-height: 20px;
+      @include background($color-primary);
+      p {
+        text-align: center;
+      }
+      &--title {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 14ch;
+        font-weight: 600;
+      }
+    }
   }
 }
 

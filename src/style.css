@@ -57,16 +57,17 @@ body {
   width: 40%;
   max-width: 180px;
   height: 35px;
-  background-color: #EEBA2C;
   border: none;
   border-radius: 10px;
   font-size: 1rem;
   font-family: "Gloria Hallelujah", cursive;
   text-align: center;
+  background-color: #EEBA2C;
+  color: #262626;
 }
 
 .header-with-logo {
-  margin: 15px 0;
+  padding: 15px 0 20px 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -81,6 +82,56 @@ body {
   font-size: 0.8rem;
   font-family: "Gloria Hallelujah", cursive;
   text-align: center;
+}
+
+.gallery__display {
+  padding: 0 20px;
+  text-align: center;
+  font-family: "Hind Guntur", sans-serif;
+}
+.gallery__display__total-results {
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+}
+.gallery__display__movies {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px 15px;
+}
+.gallery__display__movies a {
+  text-decoration: none;
+}
+.gallery__display__movies article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.gallery__display__movies img {
+  width: 120px;
+  height: 156px;
+  object-fit: cover;
+}
+.gallery__display__movies__movie-info {
+  width: 120px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0 0 10px 10px;
+  font-size: 1rem;
+  line-height: 20px;
+  background-color: #EEBA2C;
+  color: #262626;
+}
+.gallery__display__movies__movie-info p {
+  text-align: center;
+}
+.gallery__display__movies__movie-info--title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 14ch;
+  font-weight: 600;
 }
 
 /*# sourceMappingURL=style.css.map */

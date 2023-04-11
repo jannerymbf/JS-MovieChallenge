@@ -16,8 +16,8 @@ btn.addEventListener('click', () => {
           `<a href="#movie-display">
             <article class="${element.imdbID}">
               <img class="${element.imdbID}" width=100 src="${element.Poster}" alt="${element.Title}">
-              <div class="${element.imdbID}">
-                <p class="${element.imdbID}">${element.Title}</p>
+              <div class="${element.imdbID} gallery__display__movies__movie-info">
+                <p class="${element.imdbID} gallery__display__movies__movie-info--title">${element.Title}</p>
                 <p class="${element.imdbID}">${element.Type}</p>
                 <p class="${element.imdbID}">${element.Year}</p>
               </div>
