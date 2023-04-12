@@ -39,7 +39,12 @@ movieDescriptionSection.style.display = 'none';
 
 btn.addEventListener('click', () => {
   loadMovies(input.value);
+  window.location.hash = 'movie-gallery';
 });
+
+input.addEventListener('focus', () => {
+  window.location.hash = '';
+})
 
 moviesContainer.addEventListener('click', (event) => {
   movieDescriptionSection.style.display = 'block';
