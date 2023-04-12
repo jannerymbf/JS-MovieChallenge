@@ -1,12 +1,21 @@
-import { example } from '../src/main.js';
+import { gettingMovies, showMovie } from '../src/services.js';
+import fetchMock from 'jest-fetch-mock';
 
-
-describe('example', () => {
-  it('is a function', () => {
-    expect(typeof example).toBe('function');
+describe('services', () => {
+  beforeEach(() => {
+    fetchMock.resetMocks();
   });
 
-  it('returns `example`', () => {
-    expect(example()).toBe('example');
+  it('should return an object of the search', () => {
+    // const movieData = { data: [] };
+    // fetchMock.mockResponseOnce(JSON.stringify(movieData));
+    return gettingMovies('marvel')
+      .then(data => expect(typeof data).toBe('object'));
   });
+
+  it('should return an object with info of the movie', () => {
+    return showMovie('0000')
+      .then(data => expect(typeof data).toBe('object'));
+  });
+
 });
