@@ -1,19 +1,20 @@
-import { gettingMovies, showMovie } from "./main.js";
+import { gettingMovies, showMovie } from "./services.js";
 
 const input = document.getElementById('movie-title');
 const btn = document.getElementById('search-btn');
 const moviesContainer = document.getElementById('movies-container');
 const totalResults = document.getElementById('total-results');
+const movieDescriptionSection = document.getElementById('movie-description');
 const movieShowcase = document.getElementById('movie-showcase');
 
-btn.addEventListener('click', () => {
+function loadMovies(movieTitle) {
   let template = '';
-  gettingMovies(input.value)
+  gettingMovies(movieTitle)
     .then(response => {
-      totalResults.innerHTML = `${response.totalResults} results for ${input.value}`;
+      totalResults.innerHTML = `${response.totalResults} results for ${movieTitle}`;
       response.Search.forEach(element => {
         template +=
-          `<a href="#movie-display">
+          `<a href="#movie-description">
             <article class="${element.imdbID}">
               <img class="${element.imdbID}" width=100 src="${element.Poster}" alt="${element.Title}">
               <div class="${element.imdbID} gallery__display__movies__movie-info">
@@ -29,9 +30,19 @@ btn.addEventListener('click', () => {
     .catch(() => {
       moviesContainer.innerHTML = 'No movies found';
     })
+}
+
+// So we can have a full gallery when the page is first loaded
+loadMovies('movie');
+movieDescriptionSection.style.display = 'none';
+// til here
+
+btn.addEventListener('click', () => {
+  loadMovies(input.value);
 });
 
 moviesContainer.addEventListener('click', (event) => {
+  movieDescriptionSection.style.display = 'block';
   let template = '';
   showMovie(event.target.className)
     .then(response => {
@@ -63,7 +74,7 @@ moviesContainer.addEventListener('click', (event) => {
       </table>`
       movieShowcase.innerHTML = template;
     })
-})
+});
 
 
 
