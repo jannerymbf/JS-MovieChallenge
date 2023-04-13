@@ -52,7 +52,7 @@ moviesContainer.addEventListener('click', (event) => {
   showMovie(event.target.className)
     .then(response => {
       template +=
-      ` <img src="${response.Poster}" width=100 alt="movie poster">
+      `<img src="${response.Poster}" width=100 alt="movie poster">
       <h3>${response.Title}</h3>
       <p>${response.Plot}</p>
       <table>
