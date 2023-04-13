@@ -42,6 +42,14 @@ btn.addEventListener('click', () => {
   window.location.hash = 'movie-gallery';
 });
 
+input.addEventListener('keyup', (event) => {
+  if(event.key === 'Enter') {
+    event.preventDefault();
+    loadMovies(input.value);
+    window.location.hash = 'movie-gallery';
+  }
+});
+
 input.addEventListener('focus', () => {
   window.location.hash = '';
 })
