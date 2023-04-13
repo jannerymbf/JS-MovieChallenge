@@ -1,0 +1,304 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #262626;
+  font-size: 62.5%;
+  color: #fff;
+}
+
+.searcher {
+  width: 100%;
+  height: 100vh;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  font-family: "Gloria Hallelujah", cursive;
+  text-align: center;
+}
+.searcher__logo img {
+  width: 35px;
+  height: 35px;
+}
+.searcher__logo h1 {
+  font-size: 3rem;
+  line-height: 40px;
+  color: #EEBA2C;
+}
+.searcher__message {
+  font-size: 1rem;
+}
+.searcher__input-movie {
+  width: 80%;
+  max-width: 400px;
+  height: 35px;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  color: #262626;
+  font-family: "Gloria Hallelujah", cursive;
+  text-align: center;
+}
+.searcher__input-movie::-moz-placeholder {
+  font-size: 0.8rem;
+  color: #dedede;
+}
+.searcher__input-movie::placeholder {
+  font-size: 0.8rem;
+  color: #dedede;
+}
+.searcher__input-movie:focus {
+  outline: 2px solid #EEBA2C;
+}
+.searcher__button {
+  width: 40%;
+  max-width: 180px;
+  height: 35px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-family: "Gloria Hallelujah", cursive;
+  text-align: center;
+  background-color: #EEBA2C;
+  color: #262626;
+}
+@media screen and (min-width: 1024px) {
+  .searcher__button:hover {
+    background-color: #FFCE49;
+    cursor: pointer;
+  }
+}
+
+.header-with-logo {
+  padding: 15px 0 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  color: #EEBA2C;
+}
+.header-with-logo img {
+  width: 12px;
+  height: 12px;
+}
+@media screen and (min-width: 688px) {
+  .header-with-logo img {
+    width: 20px;
+    height: 20px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .header-with-logo img {
+    width: 30px;
+    height: 30px;
+  }
+}
+.header-with-logo h1 {
+  font-size: 0.8rem;
+  font-family: "Gloria Hallelujah", cursive;
+  text-align: center;
+}
+@media screen and (min-width: 688px) {
+  .header-with-logo h1 {
+    font-size: 1rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .header-with-logo h1 {
+    font-size: 1.2rem;
+  }
+}
+
+.gallery__display {
+  padding: 0 20px;
+  padding-bottom: 20px;
+  text-align: center;
+  font-family: "Hind Guntur", sans-serif;
+}
+.gallery__display__total-results {
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+}
+.gallery__display__movies {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 180px));
+  justify-items: center;
+  justify-content: center;
+  gap: 30px 20px;
+}
+@media screen and (min-width: 1000px) {
+  .gallery__display__movies {
+    -moz-column-gap: 60px;
+         column-gap: 60px;
+  }
+}
+@media screen and (max-width: 419px) {
+  .gallery__display__movies {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.gallery__display__movies a {
+  text-decoration: none;
+}
+.gallery__display__movies article {
+  width: 120px;
+  max-width: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (min-width: 560px) {
+  .gallery__display__movies article {
+    width: 150px;
+  }
+}
+@media screen and (min-width: 688px) {
+  .gallery__display__movies article {
+    width: 180px;
+  }
+}
+.gallery__display__movies img {
+  width: 100%;
+  height: 156px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media screen and (min-width: 560px) {
+  .gallery__display__movies img {
+    height: 186px;
+  }
+}
+@media screen and (min-width: 688px) {
+  .gallery__display__movies img {
+    height: 216px;
+  }
+}
+.gallery__display__movies #movie-info {
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0 0 10px 10px;
+  font-size: 1rem;
+  line-height: 20px;
+  background-color: #EEBA2C;
+  color: #262626;
+}
+.gallery__display__movies #movie-info p {
+  text-align: center;
+}
+.gallery__display__movies #movie-info #title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 40ch;
+  font-weight: 600;
+}
+
+.movie {
+  height: 100vh;
+  font-family: "Hind Guntur", sans-serif;
+}
+.movie__display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+@media screen and (min-width: 1024px) {
+  .movie__display {
+    gap: 30px;
+  }
+}
+.movie__display img {
+  height: 195px;
+  width: 135px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media screen and (min-width: 688px) {
+  .movie__display img {
+    height: 225px;
+    width: 165px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .movie__display img {
+    height: 245px;
+    width: 185px;
+  }
+}
+.movie__display h3 {
+  width: 80%;
+  max-width: 700px;
+  height: 35px;
+  padding: 5px 10px 0 10px;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: center;
+  background-color: #EEBA2C;
+  color: #262626;
+}
+@media screen and (min-width: 688px) {
+  .movie__display h3 {
+    padding-top: 3px;
+    font-size: 1.2rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .movie__display h3 {
+    height: 45px;
+    padding-top: 4px;
+    font-size: 1.4rem;
+  }
+}
+.movie__display p {
+  width: 80%;
+  max-width: 700px;
+  font-size: 0.8rem;
+  line-height: 20px;
+  text-align: left;
+}
+@media screen and (min-width: 688px) {
+  .movie__display p {
+    font-size: 1rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .movie__display p {
+    font-size: 1.1rem;
+    line-height: 25px;
+  }
+}
+.movie__display table {
+  width: 80%;
+  max-width: 700px;
+  margin-bottom: 20px;
+  font-size: 0.8rem;
+}
+@media screen and (min-width: 688px) {
+  .movie__display table {
+    font-size: 1rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .movie__display table {
+    font-size: 1.1rem;
+  }
+}
+.movie__display table td:first-child {
+  width: 100px;
+  font-weight: 600;
+  color: #EEBA2C;
+}/*# sourceMappingURL=style.css.map */
