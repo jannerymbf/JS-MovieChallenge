@@ -86,6 +86,12 @@ body {
     font-size: 1rem;
     @include fonts($font-principal);
     @include background($color-primary);
+    @media screen and (min-width: 1024px) {
+      &:hover {
+        background-color: #FFCE49;
+        cursor: pointer;
+      }
+    }
   }
 }
 

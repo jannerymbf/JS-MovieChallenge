@@ -69,6 +69,12 @@ body {
   background-color: #EEBA2C;
   color: #262626;
 }
+@media screen and (min-width: 1024px) {
+  .searcher__button:hover {
+    background-color: #FFCE49;
+    cursor: pointer;
+  }
+}
 
 .header-with-logo {
   padding: 15px 0 20px 0;
