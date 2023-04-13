@@ -90,6 +90,7 @@ body {
 
 .gallery__display {
   padding: 0 20px;
+  padding-bottom: 20px;
   text-align: center;
   font-family: "Hind Guntur", sans-serif;
 }
@@ -98,27 +99,53 @@ body {
   font-size: 1.2rem;
 }
 .gallery__display__movies {
+  max-width: 1000px;
+  margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px 15px;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 180px));
+  justify-items: center;
+  justify-content: center;
+  gap: 30px 15px;
 }
 .gallery__display__movies a {
   text-decoration: none;
 }
 .gallery__display__movies article {
+  width: 120px;
+  max-width: 200px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
+@media screen and (min-width: 560px) {
+  .gallery__display__movies article {
+    width: 150px;
+  }
+}
+@media screen and (min-width: 688px) {
+  .gallery__display__movies article {
+    width: 180px;
+  }
+}
 .gallery__display__movies img {
-  width: 120px;
+  width: 100%;
   height: 156px;
   -o-object-fit: cover;
      object-fit: cover;
 }
+@media screen and (min-width: 560px) {
+  .gallery__display__movies img {
+    height: 186px;
+  }
+}
+@media screen and (min-width: 688px) {
+  .gallery__display__movies img {
+    height: 216px;
+  }
+}
 .gallery__display__movies__movie-info {
-  width: 120px;
+  width: 100%;
   padding: 10px;
   display: flex;
   flex-direction: column;
