@@ -38,15 +38,23 @@ movieDescriptionSection.style.display = 'none';
 // til here
 
 btn.addEventListener('click', () => {
-  loadMovies(input.value);
-  window.location.hash = 'movie-gallery';
+  if(input.value.length !== 0) {
+    loadMovies(input.value);
+    window.location.hash = 'movie-gallery';
+  } else {
+    input.value = 'You should enter a title here!!!';
+  }
 });
 
 input.addEventListener('keyup', (event) => {
   if(event.key === 'Enter') {
     event.preventDefault();
-    loadMovies(input.value);
-    window.location.hash = 'movie-gallery';
+    if(input.value.length !== 0) {
+      loadMovies(input.value);
+      window.location.hash = 'movie-gallery';
+    } else {
+      input.value = 'You should enter a title here!!!';
+    }
   }
 });
 
